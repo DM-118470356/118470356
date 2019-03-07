@@ -37,15 +37,25 @@ $_SESSION['txtTotal']= $totalValue2 ;
                          <td><input type="text" id="txtNum" name="txtNum" value="" /> </td>
                     </tr>
         
-                    <tr>
-                         <td> Password </td>
-                         <td><input type="text" id="txtPassword" name="txtPassword" value="" /> </td>
-                    </tr>
+                    
         
                     <tr>
                          <td><input type="Hidden" id="txtTotal" name="txtTotal" value="<?php echo $totalValue;?>" /> </td>
                     </tr>
-        
+               <td>Password</td>
+                            <td><input type="password" id="myInput"  value="" required/><br>
+                                <input type="checkbox" onclick="myFunction()">Show Password
+                                
+                        <script>
+                            function myFunction() {
+                                var x = document.getElementById("myInput");
+                                if (x.type === "password"){
+                                    x.type = "text";
+                                } else {
+                                    x.type = "password"
+                                }
+                            }
+                            </script>
                 </table>
          </center>
         
